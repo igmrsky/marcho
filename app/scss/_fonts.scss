@@ -37,3 +37,13 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('Roboto-Medium.woff2') format('woff2'),
+        url('Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
