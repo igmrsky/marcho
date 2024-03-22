@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -29,7 +30,7 @@
         &:hover {
             border-bottom: 1px solid $accent;
             color: $accent;
-            
+
         }
     }
 
@@ -73,11 +74,10 @@
     padding: 80px 0 35px;
     border-bottom: 1px solid #ececec;
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: 270px 200px 170px 470px;
+    grid-template-columns: 300px 200px 200px 470px;
 
     &__contacts {
-        margin-right: 30px;
+        margin-right: 50px;
     }
 
     &__nav {
@@ -123,18 +123,22 @@
 
     &__socials-link {
         transition: all .3s;
+
         path {
             fill: $default;
         }
-        &:hover{
+
+        &:hover {
             path {
                 fill: $accent;
             }
         }
     }
+
     &__text {
         margin-bottom: 25px;
     }
+
     &__form-input {
         background-color: #fff;
         max-width: 320px;
@@ -144,6 +148,7 @@
         outline: none;
         margin-right: 10px;
         box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
         &__::placeholder {
             color: $default;
             font-size: 16px;
@@ -151,16 +156,9 @@
             @extend %quicksand-500;
         }
     }
+
     &__form-btn {
-        border: none;
-        outline: none;
-        line-height: 36px;
-        background-color: $accent;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 7px 19px;
-        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-        cursor: pointer;
+        @extend %btn;
     }
 }
 
@@ -170,11 +168,105 @@
     justify-content: space-between;
     align-items: center;
     font-size: 12px;
+
     &__accept {
         display: flex;
         align-items: center;
         gap: 25px;
     }
 }
+
+// ==============================================================
+
+.top-slider {
+    background-image: url(../images/top-slider-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $back-color;
+    padding: 65px 0 45px;
+
+    &__container {
+        max-width: 1560px;
+    }
+
+    &__content {
+        padding: 125px 0 0 175px;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 670px;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title;
+        @extend %roboto-700;
+        margin-bottom: 35px;
+
+        & span {
+            display: block
+        }
+    }
+
+    &__text {
+        max-width: 470px;
+        margin-bottom: 55px;
+    }
+
+    &__btn {
+        @extend %btn;
+        line-height: 26px;
+        padding: 14px 35px;
+    }
+}
+
+.slick-dots {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+
+    & button {
+        padding: 0;
+        border: none;
+        outline: none;
+        width: 27px;
+        height: 27px;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $default;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    li {
+        padding: 0 5px;
+    }
+
+    li.slick-active button {
+        border-color: $accent;
+
+        &::before {
+            background-color: $accent
+        }
+    }
+}
+
+
 
 @import 'media';
