@@ -9,6 +9,7 @@
   "author": "IgorMri",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^3.0.2",
     "del": "^6.1.1",
     "gulp": "^4.0.2",

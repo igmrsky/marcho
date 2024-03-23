@@ -30,7 +30,6 @@
         &:hover {
             border-bottom: 1px solid $accent;
             color: $accent;
-
         }
     }
 
@@ -179,7 +178,7 @@
 // ==============================================================
 
 .top-slider {
-    background-image: url(../images/top-slider-bg.png);
+    background-image: url(../images/decor/top-slider-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $back-color;
@@ -220,6 +219,7 @@
         @extend %btn;
         line-height: 26px;
         padding: 14px 35px;
+        letter-spacing: 3.2px;
     }
 }
 
@@ -264,6 +264,229 @@
         &::before {
             background-color: $accent
         }
+    }
+}
+
+// ========================================================
+
+.categories-info {
+    padding: 120px 0;
+    background-image: url('../images/decor/top-categories-left-bg.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+
+    &__wrapper {
+        background-image: url('../images/decor/top-categories-right-bg.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+    &::before {
+        background-image: url('../images/decor/info-before-bg.svg');
+        top: -39px;
+        left: -43px;
+        width: 120px;
+        height: 121px;
+    }
+    &::after {
+        background-image: url('../images/decor/info-after-bg.svg');
+        right: -24px;
+        bottom: -24px;
+        width: 65px;
+        height: 52px;
+    }
+    &__item {
+        background-color: #fff;
+        padding: 60px 40px;
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+        &-logo {
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            font-size: 22px;
+            color: $title;
+            margin-bottom: 10px;
+            @extend %roboto-400;
+        }
+    }
+}
+
+
+.categories {
+    padding-top: 120px;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__inner {
+        display: grid;
+        gap: 30px;
+        min-height: 635px;
+        grid-template-columns: repeat(3, 1fr);
+
+        &-item {
+            padding: 35px 0 0 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            &:nth-child(1) {
+                grid-row: span 2;
+
+                .categories__inner-link:hover {
+                    color: #5800e4;
+                    &::after {
+                        width: 100%;
+                        background-color: #5800e4;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                grid-column: span 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 0;
+
+                .categories__inner-link:hover {
+                    color: $accent;
+                    &::after {
+                        width: 100%;
+                        background-color: $accent;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .categories__inner-link:hover {
+                    color: #ffb534;
+                    &::after {
+                        width: 100%;
+                        background-color: #ffb534;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .categories__inner-link:hover {
+                    color: #34c3ff;
+                    &::after {
+                        width: 100%;
+                        background-color: #34c3ff;
+                    }
+                }
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: 7px;
+        }
+
+        &-title {
+            color: $title;
+            @extend %roboto-700;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        &-link {
+            text-transform: uppercase;
+            color: $title;
+            @extend %roboto-400;
+            transition: all .3s;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 0;
+                left: 0;
+                background-color: $accent;
+                transition: all .3s;
+            }
+        }
+
+        &-subtitle--blue {
+            color: #5800e4;
+        }
+
+        &-subtitle--red {
+            color: $accent;
+        }
+
+        &-subtitle--yellow {
+            color: #ffb534;
+        }
+
+        &-subtitle--lightblue {
+            color: #34c3ff;
+        }
+    }
+}
+
+// =========================================================
+
+.video-fashion {
+    background-color: $back-color;
+    background-image: url('../images/decor/pattern.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 125px 0;
+    &__inner {
+        display: flex;
+        gap: 60px;
+    }
+    &__popup {
+        max-width: 535px;
+        width: 100%;
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    &__content {
+        max-width: 570px;
+    }
+    &__subtitle {
+        font-size: 22px;
+        color: $accent;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &__title {
+        margin-bottom: 35px;
+    }
+    &__text {
+        margin-bottom: 55px;
+    }
+    &__link {
+        @extend %btn;
+        @extend %roboto-400;
+        padding: 15px 30px;
+        letter-spacing: 3.2px;
     }
 }
 
