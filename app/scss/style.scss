@@ -975,11 +975,19 @@
         @extend %roboto-400;
         margin-bottom: 20px;
     }
+
     &__forgot {
         transition: all .3s;
     }
+
     &__forgot:hover {
         color: $accent;
+    }
+    &__text {
+        margin-bottom: 35px;
+    }
+    input[type="checkbox"] {
+        margin: 0;
     }
 }
 
