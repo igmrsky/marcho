@@ -1744,6 +1744,42 @@
     }
 }
 
+// ==========================================================
+
+.product-tabs {
+    padding-top: 110px;
+    &__top {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    &__top-link {
+        font-size: inherit;
+        line-height: 28px;
+        @extend %roboto-400;
+        margin-right: 40px;
+        padding-bottom: 10px;
+        &--active {
+            color: $title;
+            border-bottom: 1px solid $accent;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $title;
+            border-bottom: 1px solid $accent;
+        }
+    }
+    &__content-item {
+        display: none;
+        &.product-tabs__content-item--active {
+            display: block;
+        }
+    }
+}
+
 
 
 
