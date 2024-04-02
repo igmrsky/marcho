@@ -16,7 +16,7 @@ $(function () {
 
         $('.product-tabs__top-link').removeClass('product-tabs__top-link--active');
         $(this).addClass('product-tabs__top-link--active');
-        
+
         if ($('.product-tabs__content-item').hasClass('product-tabs__content-item--active')) {
             $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
         }
