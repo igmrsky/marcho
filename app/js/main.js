@@ -1,5 +1,23 @@
 $(function () {
 
+    $(window).scroll(function() {
+        const userNav = $('.user-nav');
+        const footer = $('footer');
+        const userNavHeight = userNav.outerHeight();
+        const footerTop = footer.offset().top;
+
+        if ($(window).scrollTop() + $(window).height() >= footerTop - userNavHeight) {
+            userNav.css('display', 'none');
+        } else {
+            userNav.css('display', 'flex');
+        }
+    });
+
+
+    $('.menu__btn').on('click', function(){
+        $('.menu__list').toggleClass('menu__list--active')
+    });
+
     const lastComment = $('.blog-one__comments').last();
 
     lastComment.addClass('blog-one__comments--last');
@@ -72,7 +90,7 @@ $(function () {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 2000
     })
 
     $('.star').rateYo({
