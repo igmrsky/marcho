@@ -31,6 +31,7 @@ a {
 
 .title {
     font-size: 48px;
+    line-height: 55px;
     color: $title;
     text-transform: uppercase;
     @extend %roboto-700;
