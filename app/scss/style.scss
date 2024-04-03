@@ -91,6 +91,10 @@
     &__acc {
         margin-right: 30px;
     }
+    &__nav-title,
+    &__acc-title {
+        pointer-events: none;
+    }
 
     &__logo {
         margin-bottom: 35px;
@@ -2513,163 +2517,6 @@
 
     &__form-btn {
         @extend %btn;
-    }
-}
-
-@media (max-width:1200px) {
-    .header {
-        &__inner {
-            padding-right: 10px;
-        }
-    }
-    .footer {
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            &__contacts {
-                max-width: 250px;
-            }
-            &__nav {
-                max-width: 200px;
-                width: 100%;
-            }
-            &__acc {
-                max-width: 170px;
-            }
-        }
-    }
-}
-
-@media (max-width:860px) {
-    .menu {
-        order: 1;
-        margin-left: 50px;
-
-        &__list {
-            transform: translateY(-300%);
-            position: absolute;
-            top: 120px;
-            left: 0;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            z-index: 5;
-            transition: all .3s;
-
-            &--active {
-                transform: translateY(0);
-                transition: all .3s;
-            }
-        }
-
-        &__list-item {
-            width: 100%;
-            padding: 0 15px;
-            text-align: center;
-        }
-
-        &__list-link {
-            display: block;
-            width: 100%;
-        }
-
-        &__btn {
-            width: 30px;
-            height: 22px;
-            border: none;
-            background-color: transparent;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding: 0;
-            cursor: pointer;
-
-            span {
-                width: 100%;
-                height: 3px;
-                background-color: $title;
-            }
-
-            &::after,
-            &::before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                background-color: $title;
-            }
-
-            &::after {
-                top: 0;
-            }
-
-            &::before {
-                bottom: 0;
-            }
-        }
-    }
-
-    .user-nav {
-        margin-left: auto;
-    }
-}
-
-@media (max-width:710px) {
-    .footer {
-        .footer-top {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px 0;
-            &__form-input {
-                margin-bottom: 15px;
-            }
-        }
-    }
-}
-
-@media (max-width:568px) {
-    .footer {
-        .footer-top {
-            grid-template-columns: 1fr;
-        }
-    }
-    .footer-down {
-        flex-wrap: wrap;
-        &__copy {
-            margin: 0 auto;
-            padding-right: 20px;
-        }
-        &__accept {
-            margin: 0 auto;
-        }
-    }
-}
-
-@media (max-width:500px) {
-    .menu {
-        order: 0;
-
-        &__inner {
-            padding-right: 0;
-        }
-
-        &__list {
-            top: 140px;
-        }
-    }
-
-    .user-nav {
-        height: 50px;
-        background-color: #fff;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
     }
 }
 

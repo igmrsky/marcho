@@ -1,5 +1,10 @@
 $(function () {
 
+    $('.footer-top__nav-title, .footer-top__acc-title').on('click', function() {
+        $(this).next('.footer-top__list').slideToggle();
+        $(this).toggleClass('.footer-top__title--active');
+    });
+
     $(window).scroll(function() {
         const userNav = $('.user-nav');
         const footer = $('footer');
