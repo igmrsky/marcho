@@ -1749,19 +1749,30 @@
         @extend %roboto-400;
         margin-right: 40px;
         padding-bottom: 10px;
-
-        &--active {
+        position: relative;
+        transition: all .3s;
+        &--active,
+        &:hover {
             color: $title;
-            border-bottom: 1px solid $accent;
+        }
+        &--active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            height: 1px;
+            background-color: $accent;
         }
 
         &:last-child {
             margin-right: 0;
         }
 
-        &:hover {
-            color: $title;
-            border-bottom: 1px solid $accent;
+        &:hover::after {
+            width: 100%;
+            height: 1px;
+            background-color: $accent;
         }
     }
 
