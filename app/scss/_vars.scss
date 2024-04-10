@@ -4,25 +4,58 @@ $title: #29282d;
 $back-color: #f6f6f6;
 
 %quicksand-400 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: normal;
+    font-family: 'Quicksand';
+    font-weight: 400;
 }
+
 %quicksand-500 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand';
     font-weight: 500;
 }
 
 %roboto-400 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 %roboto-500 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     font-weight: 500;
 }
 
 %roboto-700 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+%btn {
+    border: none;
+    outline: none;
+    line-height: 36px;
+    background-color: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 7px 25px;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+    cursor: pointer;
+}
+
+%link {
+    text-transform: uppercase;
+    border: 1px solid $accent;
+    color: $title;
+    display: inline-block;
+    letter-spacing: 3.2px;
+    padding: 13px 28px;
+    @extend %roboto-400;
+    margin-top: 55px;
+}
+
+%radio-hidden,
+%checkbox-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
